@@ -31,3 +31,15 @@ QuoraFlow/
 ├── index.js         # Main server and REST routes logic
 ├── package.json     # Project dependencies and scripts
 └── .gitignore       # Prevents node_modules from being uploaded
+
+
+## 🚦 Getting Started
+
+### 1. Prerequisites
+Ensure you have **Node.js** installed on your system.
+
+### 2. Installation
+Clone the repository to your local machine:
+```bash
+git clone [https://github.com/Sujalredekaer27/QuoraFlow.git](https://github.com/Sujalredekaer27/QuoraFlow.git)
+cd QuoraFlow
