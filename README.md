@@ -30,9 +30,9 @@ QuoraFlow/
 ├── views/           # EJS Templates (Feed, Create, Edit, Show)
 ├── index.js         # Main server and REST routes logic
 ├── package.json     # Project dependencies and scripts
-└── .gitignore       # Prevents node_modules from being uploaded
+└── .gitignore       # Prevents node_modules from being uploaded 
 
-
+---
 ## 🚦 Getting Started
 
 ### 1. Prerequisites
