@@ -4,28 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts</title>
+    <title>QuoraFlow | Feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <h1>Quora Posts</h1>
-    <% for(post of posts) { %>
-        <div class="post">
-            <h2 class="user"> @<%= post.username %>
-            </h2>
-            <p class="content">
-                <%= post.content %>
-            </p>
-            <a href="http://localhost:8080/posts/<%=post.id%>/edit">edit the post</a>
-            <a href="http://localhost:8080/posts/<%=post.id%>">See in Detail</a><br><br>
-            <form method="post" action="/posts/<%=post.id%>?_method=DELETE"><button class="delete-post btn">Delete Post</button></form>
-        </div>
-    <% } %>
+    <div class="app-container">
+        <header class="main-header">
+            <h1>Quora<span>Flow</span></h1>
+            <a href="/posts/new" class="btn btn-primary">+ New Post</a>
+        </header>
 
-    <br>
-    <br>
-    <a href="http://localhost:8080/posts/new">create new post</a>
+        <main class="feed">
+            <% for(post of posts) { %>
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="avatar">
+                            <%= post.username.charAt(0).toUpperCase() %>
+                        </div>
+                        <h2 class="user">@<%= post.username %>
+                        </h2>
+                    </div>
+
+                    <p class="content">
+                        <%= post.content %>
+                    </p>
+
+                    <div class="post-footer">
+                        <a href="/posts/<%=post.id%>" class="text-link">View Details</a>
+                        <div class="action-btns">
+                            <a href="/posts/<%=post.id%>/edit" class="btn btn-edit">Edit</a>
+                            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                                <button class="btn btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </main>
+    </div>
 </body>
 
 </html>

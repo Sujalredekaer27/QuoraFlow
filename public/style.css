@@ -1,34 +1,134 @@
-.post{
-    width: 400px;
-    background-color: bisque;
-    height: 200px;
-    border-radius: 20px;
-    border: 2px solid rgb(245, 190, 123);
-    padding: 8px;
-    margin-bottom: 10px;
+:root {
+    --primary: #6366f1;
+    --danger: #ff4757;
+    --bg: #f0f2f5;
+    --white: #ffffff;
+    --text-dark: #2d3436;
+    --text-gray: #636e72;
 }
 
-.user{
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    color: var(--text-dark);
 }
 
-.content{
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(35, 34, 34);
+.app-container,
+.form-wrapper {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
+.main-header h1 span {
+    color: var(--primary);
+}
 
+/* Post Card */
+.post-card,
+.form-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
 
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
 
+.avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
 
-.btn{
-    background-color: rgb(168, 84, 247);
-    padding: 8px;
-    border-color: rgb(139, 23, 247);
+/* Inputs & Forms */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
     border-radius: 10px;
+    font-family: inherit;
+    box-sizing: border-box;
 }
-a{
-    color: rgb(134, 5, 254);
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-edit {
+    background: #e8eaff;
+    color: var(--primary);
+}
+
+.btn-delete {
+    background: #ffe8e8;
+    color: var(--danger);
+}
+
+.btn-cancel {
+    background: #f1f2f6;
+    color: var(--text-gray);
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f2f6;
+    padding-top: 15px;
 }

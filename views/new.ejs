@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new post</title>
+    <title>QuoraFlow | New Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <form method="post" action="/posts">
-        <input placeholder="Enter username" name="username">
-        <br>
-        <textarea placeholder="write your post here" name="content"></textarea>
-        <br>
-        <button class="btn">Submit Post</button>
-    </form>
+    <div class="form-wrapper">
+        <div class="form-card">
+            <h2>Create a New Post</h2>
+            <p class="subtitle">Share your thoughts with the world</p>
+
+            <form method="post" action="/posts">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="e.g. sujal_redekear" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="content">What's on your mind?</label>
+                    <textarea id="content" rows="6" placeholder="Write your post here..." name="content"
+                        required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary">Publish Post</button>
+                    <a href="/posts" class="btn btn-cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

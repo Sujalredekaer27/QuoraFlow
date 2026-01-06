@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <h2>Edit your Post</h2>
-    <p><b>Post id - </b><%= post.id %></p>
-    <h2 class="user">@<%=post.username%></h4>
-    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
-        <textarea rows="10" cols="35" name="content"><%=post.content%></textarea><br>
-        <button class="btn">Submit</button>
-    </form>
+    <div class="form-container">
+        <h2>Edit Post</h2>
+        <p style="color: var(--text-light)">ID: <%= post.id %>
+        </p>
+
+        <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+            <label>Content</label>
+            <textarea rows="5" name="content"><%= post.content %></textarea>
+
+            <button class="btn">Update Post</button>
+            <a href="/posts" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
 </body>
+
 </html>
